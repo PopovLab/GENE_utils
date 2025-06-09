@@ -13,7 +13,7 @@ cmap2 = 'plasma'   # Цветовая схема для второго дата�
 
 file_path = 'densdata_higher_omt_lowres.h5'
 
-R = hdf5. (file_path, '/coord/R')
+R = hdf5.load_dataset(file_path, '/coord/R')
 Z = hdf5.load_dataset(file_path, '/coord/Z')
 dataset = hdf5.load_dataset(file_path, '/electron/density')
 #dataset = hdf5.load_dataset(file_path, 'potential')
