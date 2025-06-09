@@ -196,3 +196,5 @@ cython_debug/
 *.txt
 *.mp4
 poetry.lock
+*.gif
+*.png
