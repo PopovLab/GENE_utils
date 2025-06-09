@@ -18,8 +18,6 @@ def load_dataset(file_path, dataset_name):
             
             # Читаем весь массив в память (осторожно с большими данными!)
             return np.array(dataset)
-            
-
 
     except Exception as e:
         print(f"Ошибка: {str(e)}")
