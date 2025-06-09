@@ -13,11 +13,11 @@ cmap2 = 'plasma'   # Цветовая схема для второго дата�
 
 file_path = 'densdata_higher_omt_lowres.h5'
 
-R = hdf5.load_dataset(file_path, '/coord/R')
+R = hdf5. (file_path, '/coord/R')
 Z = hdf5.load_dataset(file_path, '/coord/Z')
-#dataset = reader.dataset_reader(file_path, '/electron/density')
-dataset = hdf5.load_dataset(file_path, 'potential')
-title = 'potential'
+dataset = hdf5.load_dataset(file_path, '/electron/density')
+#dataset = hdf5.load_dataset(file_path, 'potential')
+title = 'density'
 output_gif = f'{title}_disk.gif'
 # Получаем глобальные диапазоны для стабильной цветовой карты (опционально)
 try:
@@ -33,7 +33,7 @@ fig.subplots_adjust(right=0.99,wspace=0.01, hspace=0.01)
 
 n_frames = dataset.shape[0]
 
-img1 = ax1.pcolormesh(R, Z, dataset[0,:,:], cmap=cmap2, shading='gouraud')
+img1 = ax1.pcolormesh(R, Z, dataset[0,:,:], cmap=cmap1, shading='gouraud')
 ax1.set_title(f"{title} 0/{n_frames-1}", fontsize=14)
 ax1.set_aspect('equal')
 ax1.set_ylabel('Z(m)')
