@@ -16,7 +16,6 @@ total_elements = n_frames * height * width
 print(f"Размер датасета: {n_frames}, {height}, {width}")
 print(f"Всего {total_elements:,} точек...")
 
-value_format="%.8f"
 # Создаем формат для научной записи
 col_width = 25
 precision = 12
